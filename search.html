@@ -18,8 +18,7 @@
 <body>
   <header class="main-header">
     <div class="container">
-      <div class="logo"><a href="/">SHOWSCOUT</a></div>
-      <nav>
+      <nav class="nav-menu">
         <ul>
           <li>
             <a class="nav-link" href="/">Films</a>
@@ -29,137 +28,70 @@
           </li>
         </ul>
       </nav>
+      <div class="logo"><a href="/">
+          <span class="text-accent">SHOW</span>SCOUT
+        </a>
+      </div>
+      <section class="search">
+        <div class="container">
+          <div id="alert"></div>
+          <form action="/search.html" class="search-form">
+            <!-- movies and shows radio box -->
+
+            <div class="search-flex">
+              <input class="text-center" type="text" name="search-term" id="search-term" placeholder="Recherche..." />
+              <select name="type" id="select-type">
+                <option value="movie">Film</option>
+                <option value="tv">Série TV</option>
+              </select>
+              <button class="btn" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
   </header>
+  <main>
+    <!-- Search Movies/Shows -->
+    <section class="search">
+      <div class="container">
+        <h2>Recherche</h2>
+        <div id="alert"></div>
+        <form action="/search.html" class="search-form">
+          <div class="search-radio">
+            <div>
+              <input type="radio" id="movie" name="type" value="movie" checked />
+              <label for="movies"> Films </label>
+            </div>
+            <div>
+              <input type="radio" id="tv" name="type" value="tv" />
+              <label for="shows"> Séries TV </label>
+            </div>
+          </div>
+          <div class="search-flex">
+            <input type="text" name="search-term" id="search-term" placeholder="Recherche..." />
+            <button class="btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
 
-  <!-- Search Movies -->
-  <section class="search">
-    <div class="container">
-      <div id="alert"></div>
-      <form action="/search.html" class="search-form">
-        <div class="search-radio">
-          <input type="radio" id="movie" name="type" value="movie" checked />
-          <label for="movies">Movies</label>
-          <input type="radio" id="tv" name="type" value="tv" />
-          <label for="shows">TV Shows</label>
-        </div>
-        <div class="search-flex">
-          <input type="text" name="search-term" id="search-term" placeholder="Enter search term" />
-          <button class="btn" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Search Results -->
-  <section id="search-results-wrapper" class="container">
-    <heading id="search-results-heading"></heading>
-    <div id="search-results" class="grid">
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <a href="#">
-          <img src="images/no-image.jpg" class="card-img-top" alt="" />
-        </a>
-        <div class="card-body">
-          <h5 class="card-title">Movie Or Show Name</h5>
-          <p class="card-text">
-            <small class="text-muted">Release: XX/XX/XXXX</small>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div id="pagination">
-      <div class="pagination">
-        <button class="btn btn-primary" id="prev">Prev</button>
-        <button class="btn btn-primary" id="next">Next</button>
-        <div class="page-counter">Page 1 of 5</div>
-      </div>
-    </div>
-  </section>
-
+    <!-- Search Results -->
+    <section id="search-results-wrapper" class="container">
+      <heading id="search-results-heading"></heading>
+      <div id="search-results" class="grid"></div>
+      <div id="pagination"></div>
+    </section>
+  </main>
   <!-- Footer -->
   <footer class="main-footer">
     <div class="container">
       <div class="logo"><a href="/">SHOWSCOUT</a></div>
-      <div>Une création de <a class="a-secondary" href="https://EvansWebDesign.tech">Evans Web Design</a></div>
+      <div>Une création de <a class="a-accent" href="https://EvansWebDesign.tech">Evans Web Design</a></div>
       <div class="social-links">
         <a href="https://www.facebook.com/EvansWDesign/" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com/EvansWdesign" target="_blank"><i class="fab fa-twitter"></i></a>
